@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Formulário</title>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- JavaScript -->
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="cabecalho">
+            <h1 class="titulo-principal">Validação de Formulário</h1>
+        </header>
+        <!-- Formulário -->
+        <form id="form">
+            <h2 class="titulo-form">
+                Cadastre-se <i class="bi bi-emoji-smile"></i>
+            </h2>
+            <div class="box-input">
+                <label for="email" class="label">
+                    E-mail: <span class="obrigatorio">*</span>
+                </label>
+                <input type="email" id="email" class="input" placeholder="Digite um e-mail..." required>
+            </div>
+            <div class="box-input">
+                <label for="senha" class="label">
+                    Senha: <span class="obrigatorio">*</span>
+                </label>
+                <input type="password" id="senha" class="input" placeholder="Digite uma senha..." pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%&*]).{8,}" title="Sua senha deve conter pelo menos 8 caracteres, compostos por letras minúsculas, maiúsculas, símbolos (!@#$%&*) e números" required>
+            </div>
+            <div class="box-btn-submit">
+                <button type="submit" class="btn-submit">
+                    Cadastrar-se <i class="bi bi-person-add"></i>
+                </button>
+            </div>
+        </form>
+        <!-- Modal -->
+        <div id="boxModal">
+            <div class="modal">
+                <span id="msgModal">Teste</span>
+                <button type="button" id="btnFecharModal">Fechar</button>
+            </div>
+        </div>
+        <!-- Rodapé -->
+        <footer class="rodape">
+            <p class="creditos-dev">
+                Desenvolvido por <a href="https://www.github.com/vitorggds17" target="_blank" class="link-creditos">Vitor Souza</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
